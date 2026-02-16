@@ -53,7 +53,7 @@ namespace mediaplayerapp
             }
             else if (e.newState == 3)
             {
-                lblDuration.Text = "Duration" + VideoPlayer.currentMedia.durationString;
+                lblDuration.Text = "Duration " + VideoPlayer.currentMedia.durationString;
             }
             else if (e.newState == 8)
             {
