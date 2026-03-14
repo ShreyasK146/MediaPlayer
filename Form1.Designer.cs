@@ -39,6 +39,7 @@
             lblFileName = new Label();
             lblDuration = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            merToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)VideoPlayer).BeginInit();
             SuspendLayout();
@@ -54,16 +55,17 @@
             // 
             // filToolStripMenuItem
             // 
-            filToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadToolStripMenuItem, aboutToolStripMenuItem });
+            filToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadToolStripMenuItem, aboutToolStripMenuItem, merToolStripMenuItem });
             filToolStripMenuItem.Name = "filToolStripMenuItem";
             filToolStripMenuItem.Size = new Size(37, 20);
             filToolStripMenuItem.Text = "File";
+            filToolStripMenuItem.Click += filToolStripMenuItem_Click;
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             loadToolStripMenuItem.Size = new Size(180, 22);
-            loadToolStripMenuItem.Text = "Load";
+            loadToolStripMenuItem.Text = "Load Media";
             loadToolStripMenuItem.Click += LoadFolderEvent;
             // 
             // aboutToolStripMenuItem
@@ -117,6 +119,13 @@
             // 
             timer1.Tick += TimerEvent;
             // 
+            // merToolStripMenuItem
+            // 
+            merToolStripMenuItem.Name = "merToolStripMenuItem";
+            merToolStripMenuItem.Size = new Size(180, 22);
+            merToolStripMenuItem.Text = "Merge Video/Audio";
+            merToolStripMenuItem.Click += OnMergeVideoAudioClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -150,5 +159,6 @@
         private Label lblFileName;
         private Label lblDuration;
         private System.Windows.Forms.Timer timer1;
+        private ToolStripMenuItem merToolStripMenuItem;
     }
 }
